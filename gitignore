@@ -1,0 +1,67 @@
+# Reversible Face Privacy - .gitignore
+# Combined from PULSE and StegFormer projects
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ============================================
+# PULSE Specific (.gitignore from PULSE)
+# ============================================
+# IDE
+.idea/*
+
+# Input/Output directories
+input/*
+realpics/*
+
+# Cache
+cache/*
+runs/*
+
+# macOS
+.DS_Store
+
+# Python cache (already covered above but keeping for reference)
+__pycache__/*
+
+# ============================================
+# StegFormer Specific (.gitignore from StegFormer)
+# ============================================
+# Python cache
+__pycache__/
+
+# Training logs
+nohup**
+
+# Image output directories - with clamp
+image/clamp/cover/*
+image/clamp/stego/*
+image/clamp/secret/*
+image/clamp/secret_rev/*
+!image/clamp/cover/.gitkeep
+!image/clamp/stego/.gitkeep
+!image/clamp/secret/.gitkeep
+!image/clamp/secret_rev/.gitkeep
+
+# Image output directories - without clamp
+image/wo_clamp/cover/*
+image/wo_clamp/stego/*
+image/wo_clamp/secret/*
+image/wo_clamp/secret_rev/*
+!image/wo_clamp/cover/.gitkeep
+!image/wo_clamp/stego/.gitkeep
+!image/wo_clamp/secret/.gitkeep
+!image/wo_clamp/secret_rev/.gitkeep
+
+# Checkpoints
+checkpoint/*
+!checkpoint/.gitkeep
+
+# TensorBoard logs
+tensorboard_log/*
+!tensorboard_log/.gitkeep
